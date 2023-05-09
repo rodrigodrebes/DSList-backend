@@ -20,7 +20,6 @@ public class Game {
     private String longDescription;
 
     public Game(){
-
     }
 
     public Game(Long id, String title, Integer year, String genre, String platform, String imgUrl, String shortDescription, String longDescription) {
@@ -98,7 +97,7 @@ public class Game {
         this.longDescription = longDescription;
     }
 
-    // realiza a comparação entre os jogos
+    // realiza a comparação entre os games
     @Override
     public int hashCode(){
         return Objects.hash(id);
