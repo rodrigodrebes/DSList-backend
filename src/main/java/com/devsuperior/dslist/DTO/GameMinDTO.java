@@ -1,5 +1,6 @@
 package com.devsuperior.dslist.DTO;
 import com.devsuperior.dslist.entities.Game;
+import com.devsuperior.dslist.projections.GameMinProjection;
 
 // Data Transfer Object = transferência de dados entre as camadas de uma aplicação
 // retorna um conjunto de atributos mínimos
@@ -20,6 +21,14 @@ public class GameMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
     public Long getId() {
         return id;
